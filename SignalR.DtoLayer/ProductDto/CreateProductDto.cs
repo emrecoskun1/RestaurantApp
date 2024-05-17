@@ -15,4 +15,4 @@ namespace SignalR.DtoLayer.ProductDto
         public bool ProductStatus { get; set; }
     }
 }
-}
+

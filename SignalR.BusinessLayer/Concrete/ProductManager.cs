@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SignalR.BusinessLayer.Concrete
 {
-    internal class ProductManager : IProductService
+    public class ProductManager : IProductService
     {
         private readonly IProductDal _productDal;
 
@@ -36,6 +36,11 @@ namespace SignalR.BusinessLayer.Concrete
         public List<Product> TGetListAll()
         {
             return _productDal.GetListAll();
+        }
+
+        public List<Product> TGetProductsWithCategories()
+        {
+            return _productDal.GetProductsWithCategories();
         }
 
         public void TUpdate(Product entity)

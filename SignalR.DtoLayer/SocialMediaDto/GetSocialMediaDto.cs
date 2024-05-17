@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SignalR.DtoLayer.SocialMediaDto
 {
-    internal class GetSocialMediaDto
+    public class GetSocialMediaDto
     {
         public int SocialMediaID { get; set; }
         public string Title { get; set; }
