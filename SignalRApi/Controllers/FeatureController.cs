@@ -34,24 +34,24 @@ namespace SignalRApi.Controllers
         {
             _featureService.TAdd(new Feature()
             {
-                  Description1 = createFeatureDto.Description1,
-                  Description2 = createFeatureDto.Description2, 
-                  Description3 = createFeatureDto.Description3,
-                  Title1 = createFeatureDto.Title1,
-                  Title2 = createFeatureDto.Title2,
-                  Title3 = createFeatureDto.Title3,
+                Description1 = createFeatureDto.Description1,
+                Description2 = createFeatureDto.Description2,
+                Description3 = createFeatureDto.Description3,
+                Title1 = createFeatureDto.Title1,
+                Title2 = createFeatureDto.Title2,
+                Title3 = createFeatureDto.Title3,
 
             });
             return Ok("Öne Çıkan Bilgisi Eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteFeature(int id)
         {
             var value = _featureService.TGetByID(id);
             _featureService.TDelete(value);
             return Ok("Öne Çıkan Bilgisi Silindi");
         }
-        [HttpGet("GetFeature")]
+        [HttpGet("{id}")]
         public IActionResult GetFeature(int id)
         {
             var value = _featureService.TGetByID(id);
